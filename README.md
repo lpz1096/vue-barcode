@@ -1,74 +1,33 @@
-# VueBarcode
+# vue3-barcode
 
-Add barcodes to your Vue application super easily with VueBarcode! [Try it out!](http://jsfiddle.net/hfgan035/13/)
+barcode for vue3
 
-Supported barcode formats:
-`CODE128`
-`EAN`
-`EAN-13`
-`EAN-8`
-`EAN-5`
-`EAN-2`
-`UPC (A)`
-`CODE39`
-`ITF-14`
-`MSI`
-`Pharmacode`
-`Codabar`
+#### vue2 version
 
-It is a light wrapper for the [JsBarcode](https://github.com/lindell/JsBarcode) barcode library.
+see the [vue-barcode](https://github.com/lindell/vue-barcode).
 
-## Install
-````
-npm install vue-barcode
-````
+### Installation
 
-## Use
-#### 1. Add VueBarcode as a component
+npm install vue3-barcode
 
-````javascript
-import VueBarcode from 'vue-barcode';
+### Use
 
-new Vue({
+```javascript
+import Vue3Barcode from 'vue3-barcode'
+export default defineComponent({
   components: {
-    'barcode': VueBarcode
-  }
-})
-````
-#### 2. Use it
-
-````html
-<barcode value="value-to-render" format="barcode-format" ...more options>
-  Show this if the rendering fails.
-</barcode>
-````
-
-## Example
-Simple example with input binding. [Try it out with this JsFiddle!](http://jsfiddle.net/hfgan035/4/)
-````html
-<div id="app">
-  <input v-model="barcodeValue" /><br>
-  <barcode v-bind:value="barcodeValue">
-    Show this if the rendering fails.
-  </barcode>
-</div>
-````
-
-````javascript
-import VueBarcode from 'vue-barcode';
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    barcodeValue: 'test',
+    Vue3Barcode,
   },
-  components: {
-    'barcode': VueBarcode
-  }
 })
-````
+```
 
-# Options
+```html
+<vue3-barcode value="vue3-barcode" :height="50" />
+```
+
+### Options
+
+All options:
 All options:
 
 `format`
@@ -90,6 +49,5 @@ All options:
 `margin-right`
 `display-value`
 `ean128`
-
 
 For more information, see the [JsBarcode documentation](https://github.com/lindell/JsBarcode/wiki/Options).
